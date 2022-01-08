@@ -3,6 +3,7 @@
 
 
 #### Required source code is stored in `src` directory.
+_______________________________________________________
 
 - A `main.go` file for simple webApp.
 - A `Dockerfile` to generate required container image. 
