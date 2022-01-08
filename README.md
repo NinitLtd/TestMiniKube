@@ -25,6 +25,10 @@
 **Steps:**
 - To deploy app run `kubecctl apply -f go_app_deployment.yaml`. This step will create a deployment in `default` namespace with 1 replicaSet and 2 Pods.
 - To check status of deployment run `kubectl get deployment go-app -n default`.
+```
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+go-app   2/2     2            2           9m23s
+```
 - To expose this go web app we will need to create a kubernetes service of type `LoadBalancer` or `NodePort`. In this example we will be creating service of type `LoadBalancer`. To create service run `kubectl apply -f go_lb_service.yaml`
 - to check status of service run `kubectl get svc go-app -n default`. You will see the status of `EXTERNAL-IP` is pending. 
 ```
