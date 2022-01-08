@@ -51,4 +51,4 @@ curl http://10.110.62.80:9090
 Hello, Welcome to the world of Kubernetes!
 ```
 
-**Note: IMHO this is `PoC` so the build and deployment steps are manual. I would prefer to build `CI/CD` pipelines to automate build and deployments.**
+**Note: IMHO this is `PoC` so the build and deployment steps are manual. I would prefer to build `CI/CD` pipelines to automate build and deployment steps.**
