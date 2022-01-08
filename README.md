@@ -15,7 +15,7 @@
 - A `go_app_deployment.yaml` to deploy GoApp. 
 - A `go_lb_service.yaml` to create kubernetes service of `type=LoadBalancer`. 
 
-#### Deployment steps:
+## Deployment steps:
 **Prerequisites:**
 - You will need a working `minikube` local environment to deploy this application. I've tested with `minikube version: v1.24.0`. [MiniKube](https://minikube.sigs.k8s.io/docs/start/)
 - You will also need `kubectl` commandline utility installed on your host. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
