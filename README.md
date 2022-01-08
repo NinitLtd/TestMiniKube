@@ -11,4 +11,4 @@
     - A `go_app_deployment.yaml` to deploy GoApp. 
     - A `go_lb_service.yaml` to create kubernetes service of `type=LoadBalancer`
 
-    **Note: A docker image has been pushed to public docker.io repository. please change/update the container image location if you have prefer so.**
+**Note: A docker image has been pushed to public docker.io repository. please change/update the container image location if you have prefer so.**
