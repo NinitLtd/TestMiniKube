@@ -24,10 +24,27 @@
 
 **Steps:**
 - To deploy app run `kubecctl apply -f go_app_deployment.yaml`. This step will create a deployment in `default` namespace with 1 replicaSet and 2 Pods.
+- To check status of deployment run `kubectl get deployment go-app -n default`.
 - To expose this go web app we will need to create a kubernetes service of type `LoadBalancer` or `NodePort`. In this example we will be creating service of type `LoadBalancer`. To create service run `kubectl apply -f go_lb_service.yaml`
-- Finally we will run `minikube tunnel` which creates a foreground proces. It uses the cluster's IP as a gateway. In this case it will be our minikube node IP.
-- To access this app from CLI from your host use `curl http://<CLUSTER_IP>:9090`
+- to check status of service run `kubectl get svc go-app -n default`. You will see the status of `EXTERNAL-IP` is pending. 
+```
+NAME     TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+go-app   LoadBalancer   10.110.62.80   <pending>     9090:31699/TCP   19s
+```
 
-- If you don't know what is your `CLUSTER_IP` then either use `kubectl cluster-info` or `minikube profile list` 
+- Finally from a separate terminal window we will run `minikube tunnel` which creates a foreground process and populates a `EXTERNAL-IP`.
+- To access this app from CLI from your host use `curl http://<EXTERNAL-IP>:9090`
+
+```$kubectl get svc go-app -n default
+NAME     TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)          AGE
+go-app   LoadBalancer   10.110.62.80   10.110.62.80   9090:31699/TCP   3m31s
+```
+
+- You should now be able to access the web app using `CURL` or `web brwser`.
+
+```
+curl http://10.110.62.80:9090
+Hello, Welcome to the world of Kubernetes!
+```
 
 **Note: IMHO this is `PoC` so the build and deployment steps are manual. I would prefer to build `CI/CD` pipelines to automate build and deployments.**
