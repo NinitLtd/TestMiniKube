@@ -3,8 +3,8 @@
 
 
 #### Required source code is stored in `src` directory.
-    - A `main.go` file for simple webApp.
-    - A `Dockerfile` to generate required container image.
+    * A **main.go** file for simple webApp.
+    * A `Dockerfile` to generate required container image.
 
 #### Required kubernetes resource configurations are stored in `k8s` directory.
 
