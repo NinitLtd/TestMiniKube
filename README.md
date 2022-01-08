@@ -14,6 +14,7 @@ _______________________________________________________
 **Note: A docker image has been pushed to public docker repository for this PoC. please change/update the container image location if you prefer so.**
 
 #### Required kubernetes resource configurations are stored in `k8s` directory.
+-------------------------------------------------------------------------------
 
 - A `go_app_deployment.yaml` to deploy GoApp. 
 - A `go_lb_service.yaml` to create kubernetes service of `type=LoadBalancer`. 
