@@ -7,7 +7,7 @@
 - A `main.go` file for simple webApp.
 - A `Dockerfile` to generate required container image.
 - To build docker image use this command -> `docker build -t barotn/hellogo:latest`. 
-    **Note: The `barotn` is my userid AND `hellogo` is image name with `latest` tag**
+**Note: The `barotn` is my userid AND `hellogo` is image name with `latest` tag**
 - To push docker image to docker `push barotn/hellogo:latest`.
 
 **Note: A docker image has been pushed to public docker repository. please change/update the container image location if you have prefer so.**
