@@ -5,12 +5,12 @@
 #### Required source code is stored in `src` directory.
 
 - A `main.go` file for simple webApp.
-- A `Dockerfile` to generate required container image.
+- A `Dockerfile` to generate required container image. 
 - To build docker image use this command -> `docker build -t barotn/hellogo:latest`. 
-**Note: The `barotn` is my userid AND `hellogo` is image name with `latest` tag**
-- To push docker image to docker `push barotn/hellogo:latest`.
+**Note: The `barotn` is my userid on `hub.docker.com` AND `hellogo` is image name with `latest` tag**
+- To push docker image to hub.docker.com run -> `docker push barotn/hellogo:latest`.
 
-**Note: A docker image has been pushed to public docker repository. please change/update the container image location if you have prefer so.**
+**Note: A docker image has been pushed to public docker repository for this PoC. please change/update the container image location if you prefer so.**
 
 #### Required kubernetes resource configurations are stored in `k8s` directory.
 
