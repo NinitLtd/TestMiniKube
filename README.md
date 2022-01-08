@@ -1,9 +1,6 @@
-## Steps to deploy a simple GoApp on kubernetes. 
-### This document is specifically prepared to deploy GoApp on 
+# Steps to deploy a simple GoApp on kubernetes (MiniKube). 
 
-
-#### Required source code is stored in `src` directory.
-_______________________________________________________
+## Required source code is stored in `src` directory.
 
 - A `main.go` file for simple webApp.
 - A `Dockerfile` to generate required container image. 
@@ -13,8 +10,7 @@ _______________________________________________________
 
 **Note: A docker image has been pushed to public docker repository for this PoC. please change/update the container image location if you prefer so.**
 
-#### Required kubernetes resource configurations are stored in `k8s` directory.
--------------------------------------------------------------------------------
+## Required kubernetes resource configurations are stored in `k8s` directory.
 
 - A `go_app_deployment.yaml` to deploy GoApp. 
 - A `go_lb_service.yaml` to create kubernetes service of `type=LoadBalancer`. 
